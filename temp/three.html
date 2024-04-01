@@ -125,28 +125,34 @@ span:nth-child(10){
       <span>R</span>
       <span>I</span>
       <span>L</span>
-      <span>.</span>
+      <span>~</span>
       <span>F</span>
       <span>O</span>
       <span>O</span>
       <span>L</span>
-  </div>
-  <script>
-    const audioElement = document.getElementById('myAudio');
-    const playButton = document.getElementById('playButton');
+    </div>
+    <script>
+        const audioElement = document.getElementById('myAudio');
+        const playButton = document.getElementById('playButton');
 
-    playButton.addEventListener('click', () => {
-    audioElement.play().then(() => {
-        // Audio playback started successfully
-        console.log('Audio is playing');
-    }).catch(error => {
-        // Handle playback errors (optional)
-        console.error('Audio playback failed:', error);
-    });
-    document.getElementById("cont").style.display = "none";
-    document.getElementById("container").style.display = "initial"
-    });
-  </script>
+        playButton.addEventListener('click', () => {
+            audioElement.loop = true; // Set loop attribute for continuous playback
+
+            audioElement.play().then(() => {
+                console.log('Audio is playing (looping)');
+
+                // Ensure audio plays even if initially muted (optional)
+                if (audioElement.muted) {
+                audioElement.muted = false;
+                }
+
+                document.getElementById("cont").style.display = "none";
+                document.getElementById("container").style.display = "flex";
+            }).catch(error => {
+                console.error('Audio playback failed:', error);
+            });
+        });
+    </script>
 </body>
 
 </html>

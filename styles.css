@@ -1,0 +1,386 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f0f0f0;  /* Light gray background */
+    padding: 20px 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;  /* Center the container horizontally */
+  }
+  
+  .logo {
+    display: block; /* Makes the logo behave like a block element */
+    width: 100px;  /* Adjust width for desired logo size */
+    height: 100px;  /* Adjust height for desired logo size */
+    border-radius: 50%;  /* Make the logo container circular */
+    overflow: hidden;  /* Hide overflowing parts of the image */
+  }
+  
+  .logo img {
+    width: 100%;  /* Image scales to fit the container */
+    height: 100%;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: bold;
+    padding: 20px;
+  }
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #form-container {
+    width: 400px; /* Adjust width as needed */
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Open Sans', sans-serif;  /* Example styled font */
+  }
+  
+  #form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #999;
+  }
+  
+  button[type="submit"] {
+    background-color: #0248A3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0248A3;
+  }
+
+  footer {
+    background-color: #f0f0f0;
+    padding: 30px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    width: 25%; /* Adjust width as needed for your layout */
+    padding: 15px;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  .footer-section p {
+    line-height: 1.5;
+  }
+  
+  .footer-section a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .social-icons li a {
+    color: #000;
+  }
+  
+  .social-icons li a:hover {
+    color: #333;
+  }
+  
+  .copyright {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ddd;
+  }
+  
+  .copyright p {
+    margin: 0;
+  }
+  
+ 
+#cont {
+  display: none;
+  text-align: center; /* Center text within the container */
+  max-width: 800px; /* Limit container width for responsiveness */
+  padding: 30px;
+  border-radius: 5px; /* Add subtle rounded corners */
+  background-color: #fff; /* White background for content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
+}
+
+h1 {
+  font-size: 2em; /* Increase heading size */
+  margin-bottom: 15px; /* Add space after the heading */
+  color: #333; /* Darker gray for the heading */
+}
+
+p {
+  font-size: 16px; /* Adjust paragraph font size */
+  line-height: 1.5; /* Improve readability with line spacing */
+  margin-bottom: 10px; /* Add space between paragraphs */
+}
+
+ul {
+  list-style: disc; /* Use standard disc list style */
+  padding-left: 20px; /* Indent list items */
+  margin: 0; /* Remove default margin */
+}
+
+li {
+  margin-bottom: 5px; /* Add space between list items */
+}
+
+a.badge-primary {
+  text-decoration: none; /* Remove underline from anchor tag */
+}
+
+.restart-btn {
+  background-color: #4CAF50; /* Green button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease-in-out; /* Smooth button hover effect */
+}
+
+.restart-btn:hover {
+  background-color: #45A049; /* Darker green on hover */
+}
+
+
+.success-checkmark {
+  width: 80px;
+  height: 115px;
+  margin: 0 auto;
+  
+  .check-icon {
+      width: 80px;
+      height: 80px;
+      position: relative;
+      border-radius: 50%;
+      box-sizing: content-box;
+      border: 6px solid rgba(0, 0, 0, 0.988);
+      
+      &::before {
+          top: 3px;
+          left: -2px;
+          width: 30px;
+          transform-origin: 100% 50%;
+          border-radius: 100px 0 0 100px;
+      }
+      
+      &::after {
+          top: 0;
+          left: 30px;
+          width: 60px;
+          transform-origin: 0 50%;
+          border-radius: 0 100px 100px 0;
+          animation: rotate-circle 4.25s ease-in;
+      }
+      
+      &::before, &::after {
+          content: '';
+          height: 100px;
+          position: absolute;
+          background: #FFFFFF;
+          transform: rotate(-45deg);
+      }
+      
+      .icon-line {
+          height: 5px;
+          background-color: rgb(12, 156, 82);
+          display: block;
+          border-radius: 2px;
+          position: absolute;
+          z-index: 10;
+          
+          &.line-tip {
+              top: 46px;
+              left: 14px;
+              width: 25px;
+              transform: rotate(45deg);
+              animation: icon-line-tip 0.75s;
+          }
+          
+          &.line-long {
+              top: 38px;
+              right: 8px;
+              width: 47px;
+              transform: rotate(-45deg);
+              animation: icon-line-long 0.75s;
+          }
+      }
+      
+      .icon-circle {
+          top: -4px;
+          left: -4px;
+          z-index: 10;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          position: absolute;
+          box-sizing: content-box;
+          border: 4px solid rgb(15, 165, 88);
+      }
+      
+      .icon-fix {
+          top: 8px;
+          width: 5px;
+          left: 26px;
+          z-index: 1;
+          height: 85px;
+          position: absolute;
+          transform: rotate(-45deg);
+          background-color: #FFFFFF;
+      }
+  }
+}
+
+@keyframes rotate-circle {
+  0% {
+      transform: rotate(-45deg);
+  }
+  5% {
+      transform: rotate(-45deg);
+  }
+  12% {
+      transform: rotate(-405deg);
+  }
+  100% {
+      transform: rotate(-405deg);
+  }
+}
+
+@keyframes icon-line-tip {
+  0% {
+      width: 0;
+      left: 1px;
+      top: 19px;
+  }
+  54% {
+      width: 0;
+      left: 1px;
+      top: 19px;
+  }
+  70% {
+      width: 50px;
+      left: -8px;
+      top: 37px;
+  }
+  84% {
+      width: 17px;
+      left: 21px;
+      top: 48px;
+  }
+  100% {
+      width: 25px;
+      left: 14px;
+      top: 45px;
+  }
+}
+
+@keyframes icon-line-long {
+  0% {
+      width: 0;
+      right: 46px;
+      top: 54px;
+  }
+  65% {
+      width: 0;
+      right: 46px;
+      top: 54px;
+  }
+  84% {
+      width: 55px;
+      right: 0px;
+      top: 35px;
+  }
+  100% {
+      width: 47px;
+      right: 8px;
+      top: 38px;
+  }
+}
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+/* Additional styles for the success checkmark */
+.success-checkmark {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  /* Add any other styles for the checkmark container */
+}
+  /* Add media queries for responsive design (optional) */
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+  

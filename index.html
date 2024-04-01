@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devin Surveys</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -17,9 +17,12 @@
     </div>
   </header>
   <main>
-    <div class="form-container">
+    <div id="form-container">
       <h2>Your Information</h2>
       <form id="myForm">
+        <div class="form-group">
+          <label>Got referred by "Davysongs"</label>
+        </div>
         <div id="errors"></div>
         <div class="form-group">
           <label for="username">Username:</label>
@@ -45,11 +48,32 @@
           <label for="phoneNumber">Phone Number:</label>
           <input type="tel" id="phoneNumber" placeholder="ex: 0801234567" name="phoneNumber" maxlength="13" required>
         </div>
-        <div class="form-group">
-          <label for="chekbox">Got referred by "Davysongs"</label>
-        </div>
         <button type="submit">Submit</button>
       </form>      
+    </div>
+    <div style="display: none;" id = "success" class="center-div">
+      <div class="success-checkmark">
+          <div class="check-icon">
+              <span class="icon-line line-tip"></span>
+              <span class="icon-line line-long"></span>
+              <div class="icon-circle"></div>
+              <div class="icon-fix"></div>
+          </div>
+      </div>
+    </div>
+    <div id="cont">
+      <h1>Welcome to Devin Surveys</h1>
+      <p>Your first task is <b>FLAPPY BIRD</b></p>
+      <p>Instructions:</p>
+      <ul>
+          <li>Press the Spacebar or tap the screen to make the bird flap its wings.</li>
+          <li>Avoid hitting the ground and the pipes.</li>
+          <li>Pass through the gaps between the pipes to score points.</li>
+          <li>The game ends if the bird collides with the ground or a pipe.</li>
+          <li>You can only withdraw when your balance exceeds &#x20A6;100 at an instant </li>
+          <li>Payments will arrive after 30 minuites of each withdrawal</li>
+        </ul>
+      <a href="temp/two.html" class="badge badge-primary"><button class="restart-btn">Begin</button></a>
     </div>
   </main>
     <footer>
@@ -81,5 +105,5 @@
         <p>&copy; <?php echo date("Y"); ?> Devin Surveys. All Rights Reserved.</p>
       </div>
     </footer>
-    <script src="js/scripts.js"></script>
+    <script src="scripts.js"></script>
 </html>
