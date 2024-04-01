@@ -16,7 +16,6 @@ const game = {
   pipes: [],
   score: 0,
   gameOver: false,
-  attempts: 0, // Track user attempts
 };
 
 // Handle user input
@@ -97,23 +96,43 @@ function draw() {
   }
 }
 
-// ... (remaining drawing functions)
-
-function endGame() {
-  game.gameOver = true;
-  game.attempts++; // Increment attempt count after endGame
-
-  // Execute function after 3 attempts (conditional execution)
-  if (game.attempts >= 5) {
-    executeAfterAttempts();
-  }
-
-  // ... (remaining endGame logic)
+function drawBird() {
+  ctx.beginPath();
+  ctx.arc(game.bird.x, game.bird.y, game.bird.radius, 0, Math.PI * 2);
+  ctx.fillStyle = '#000';
+  ctx.fill();
 }
 
-function executeAfterAttempts() {
-  alert('You lost! Click OK to proceed');
-  window.location.href = "three.html"; 
+function drawPipes() {
+  for (let i = 0; i < game.pipes.length; i++) {
+    const pipe = game.pipes[i];
+    ctx.fillRect(pipe.x, 0, pipe.width, pipe.upperHeight);
+    ctx.fillRect(pipe.x, pipe.lowerY, pipe.width, canvas.height - pipe.lowerY);
+  }
+}
+function drawScore() {
+  ctx.fillStyle = '#000';
+  ctx.font = '20px Arial';
+  ctx.fillText(`Score: ${game.score}`, 10, 20);
+}
+
+function drawGameOver() {
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#fff';
+  ctx.font = '30px Arial';
+  ctx.fillText('Game Over', canvas.width / 2 - 50, canvas.height / 2);
+}
+var money = 0
+const cashoutButton = document.getElementById("cashout")
+function endGame() {
+  game.gameOver = true;
+  var cash = document.getElementById("cash")
+  money = parseInt(game.score) * 10
+  cash.innerHTML=`Cash : &#x20A6;${money}`
+  if (game.score >= 10){
+    cashoutButton.style.display = "initial"
+  }
 }
 
 // Main game loop
@@ -128,14 +147,13 @@ function gameLoop() {
 canvas.width = game.width;
 canvas.height = game.height;
 gameLoop();
-
 document.addEventListener('DOMContentLoaded', function () {
   const restartButton = document.getElementById('restart-btn');
   restartButton.addEventListener('click', function () {
-    window.location.reload(); // Reload the page
+      window.location.reload(); // Reload the page
   });
 });
 
 cashoutButton.addEventListener('click', () => {
-  window.location.href = "three.html";
+  window.location.href = "three.html"; 
 });
