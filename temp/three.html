@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>April Fool</title>
+<style type="text/css">
+body{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ min-height:100vh;
+ background:#262626;
+}
+#container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+}
+#container span{
+     color:rgba(255,255,255,0.1);
+     font-size:55px;
+     font-family:Arial,sans-serif;
+     text-transform:uppercase;
+     display:inline-block;
+     transition:all 0.5s;
+     animation:a 2s infinite;
+}
+span:nth-child(1){
+    animation-delay:0s;
+}
+span:nth-child(2){
+    animation-delay:0.2s;
+}
+span:nth-child(3){
+    animation-delay:0.4s;
+}
+span:nth-child(4){
+    animation-delay:0.6s;
+}
+span:nth-child(5){
+    animation-delay:0.8s;
+}
+span:nth-child(6){
+    animation-delay:1s;
+}
+span:nth-child(7){
+    animation-delay:1.2s;
+}
+span:nth-child(8){
+    animation-delay:1.4s;
+}
+span:nth-child(9){
+    animation-delay:1.6s;
+}
+span:nth-child(10){
+    animation-delay:1.8s;
+}
+@keyframes a{
+     0%{
+       transform:translateY(0);
+       margin-left:0px;
+       }
+       25%{
+       color:red;
+       transform:translateY(-15px)
+       scale(5);
+       margin-left:10px;
+       text-shadow:0px 15px 5px 
+       rgba(0,0,0,1);
+       }
+       100%{
+       color:green;
+       transform:translateY(0);
+       margin-left:0px;
+       }
+}
+#cont{
+        width:150px;
+        height:50px;
+        perspective:600px;
+ }
+ .flip{
+      width:100%;
+      height:100%;
+      position:relative;
+      transform-style:preserve-3d;
+      transition:transform 0.5s;     
+ }
+
+ .front,.back{
+     width:100%;
+     height:100%;
+     position:absolute;
+     background:#55c2da;
+     backface-visibility:hidden;
+     border-radius:30px;
+ 
+ }
+ .back{
+     transform:rotateX(180deg);
+ }
+ p{
+   font-weight:bold;
+   font-family:sans-serif;
+   text-align:center;
+   color:black;
+ }
+</style>
+</head>
+<body>
+ </style>
+ </head>
+ <body>
+ <div id="cont">
+    <div class="flip">
+         <div id="playButton" class="front">
+             <p>Confirm</p>
+         </div>   
+    </div> 
+ </div>
+     <audio id="myAudio" src="laugh.mp3"></audio>
+  <div style="display: none;" id="container">
+      <span>A</span>
+      <span>P</span>
+      <span>R</span>
+      <span>I</span>
+      <span>L</span>
+      <span>.</span>
+      <span>F</span>
+      <span>O</span>
+      <span>O</span>
+      <span>L</span>
+  </div>
+  <script>
+    const audioElement = document.getElementById('myAudio');
+    const playButton = document.getElementById('playButton');
+
+    playButton.addEventListener('click', () => {
+    audioElement.play().then(() => {
+        // Audio playback started successfully
+        console.log('Audio is playing');
+    }).catch(error => {
+        // Handle playback errors (optional)
+        console.error('Audio playback failed:', error);
+    });
+    document.getElementById("cont").style.display = "none";
+    document.getElementById("container").style.display = "initial"
+    });
+  </script>
+</body>
+
+</html>

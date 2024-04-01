@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flappy Bird</title>
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
   <div class="container">
     <canvas id="gameCanvas"></canvas>
-    <div class="score">0</div>
-    <button class="restart-btn">Restart</button>
+    <div id="cash"></div>
+    <button id="cashout" style="display: none;" class="btns">Cashout</button>
+    <br>
+    <button class="btns" id ="restart-btn">Restart</button>
+
   </div>
-  <script src="script2.js"></script>
+  <script src="js/game.js"></script>
 </body>
 </html>

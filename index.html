@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devin Surveys</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
@@ -23,28 +23,30 @@
         <div id="errors"></div>
         <div class="form-group">
           <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required>
+          <input type="text" id="username" placeholder="nickname" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="bank">Bank:</label>
+          <input type="text" id="bank" placeholder="bank name" name="accountNumber" required>
         </div>
         <div class="form-group">
           <label for="accountNumber">Account Number:</label>
-          <input type="text" id="accountNumber" name="accountNumber" required>
+          <input type="text" id="accountNumber" placeholder="ex: 1234543" name="accountNumber" maxlength="10" required>
         </div>
         <div class="form-group">
           <label for="accountName">Account Name:</label>
-          <input type="text" id="accountName" name="accountName" required>
+          <input type="text" id="accountName"  placeholder="name must match the provided account" name="accountName" required>
         </div>
         <div class="form-group">
           <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" placeholder="must be a valid email" name="email" required>
         </div>
         <div class="form-group">
           <label for="phoneNumber">Phone Number:</label>
-          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+          <input type="tel" id="phoneNumber" placeholder="ex: 0801234567" name="phoneNumber" maxlength="13" required>
         </div>
         <div class="form-group">
-          <label for="chekbox">Got referred by "Davysongs"?</label>
-          <input type="checkbox" id="chekbox" name="referredByDavysongs" value="Yes"> Yes
-          <input type="checkbox" id="referredByDavysongsNo" name="referredByNo" value="No"> No
+          <label for="chekbox">Got referred by "Davysongs"</label>
         </div>
         <button type="submit">Submit</button>
       </form>      
@@ -56,13 +58,13 @@
           <h3>Contact Us</h3>
           <p>Devin Surveys</p>
           <p>12E Main Street</p>
-          <p>ShantyTown, CA 1273</p>
+          <p>Kuje , Abuja</p>
           <p>info@devinsurveys.com</p>
           <p>(555) 555-5555</p>
         </div>
         <div class="footer-section">
           <h3>About Us</h3>
-          <p>Take surveys on your own schedule, and receive fast payouts for your time. With our flexible platform, you can start earning today.</p>
+          <p>Take surveys on your own schedule</p>
           <a href="#">Learn More</a>
         </div>
         <div class="footer-section">
@@ -79,5 +81,5 @@
         <p>&copy; <?php echo date("Y"); ?> Devin Surveys. All Rights Reserved.</p>
       </div>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </html>

@@ -19,12 +19,12 @@ body {
     border: 1px solid #ccc;
   }
   
-  .score {
+  #cash{
     font-size: 2em;
     margin-bottom: 20px;
   }
   
-  .restart-btn {
+  .btns {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
