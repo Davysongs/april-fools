@@ -56,6 +56,7 @@ form.addEventListener('submit', (event) => {
     errorsContainer.innerHTML = '<ul><li>' + errorMessage.join('</li><li>') + '</li></ul>';
   } else {
     // Form is valid, submit the form (redirect to another page)
+    form.submit();
     console.log('Form is valid! Submitting...');
     document.getElementById("form-container").style.display="none";
     displayElementTemporarily('success', 4000);
