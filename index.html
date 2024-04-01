@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devin Surveys</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="https://10web-site.ai/70/brave-drum/" class="logo">
+        <img src="logo.jpg" alt="Your Survey Website Logo">
+      </a>
+      <h1>Devin Surveys</h1>
+    </div>
+  </header>
+  <main>
+    <div class="form-container">
+      <h2>Your Information</h2>
+      <form id="myForm">
+        <div id="errors"></div>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="accountNumber">Account Number:</label>
+          <input type="text" id="accountNumber" name="accountNumber" required>
+        </div>
+        <div class="form-group">
+          <label for="accountName">Account Name:</label>
+          <input type="text" id="accountName" name="accountName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </div>
+        <div class="form-group">
+          <label for="chekbox">Got referred by "Davysongs"?</label>
+          <input type="checkbox" id="chekbox" name="referredByDavysongs" value="Yes"> Yes
+          <input type="checkbox" id="referredByDavysongsNo" name="referredByNo" value="No"> No
+        </div>
+        <button type="submit">Submit</button>
+      </form>      
+    </div>
+  </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Devin Surveys</p>
+          <p>12E Main Street</p>
+          <p>ShantyTown, CA 1273</p>
+          <p>info@devinsurveys.com</p>
+          <p>(555) 555-5555</p>
+        </div>
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Take surveys on your own schedule, and receive fast payouts for your time. With our flexible platform, you can start earning today.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; <?php echo date("Y"); ?> Devin Surveys. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="scripts.js"></script>
+</html>
